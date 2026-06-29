@@ -91,7 +91,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y podman pigz pv
 
       - id: img
-        run: echo "name=ghcr.io/$(echo '${{ github.repository_owner }}' | tr 'A-Z' 'a-z')/kinoite-uconsole" >> "$GITHUB_OUTPUT"
+        run: echo "name=ghcr.io/$(echo '${{ github.repository_owner }}' | tr 'A-Z' 'a-z')/uconsole-fedora" >> "$GITHUB_OUTPUT"
 
       - name: ghcr.io login
         run: echo "${{ secrets.GITHUB_TOKEN }}" | sudo podman login ghcr.io -u '${{ github.actor }}' --password-stdin
@@ -206,7 +206,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y podman pigz pv
 
       - id: img
-        run: echo "name=ghcr.io/$(echo '${{ github.repository_owner }}' | tr 'A-Z' 'a-z')/kinoite-uconsole" >> "$GITHUB_OUTPUT"
+        run: echo "name=ghcr.io/$(echo '${{ github.repository_owner }}' | tr 'A-Z' 'a-z')/uconsole-fedora" >> "$GITHUB_OUTPUT"
 
       - name: ghcr.io login
         run: echo "${{ secrets.GITHUB_TOKEN }}" | sudo podman login ghcr.io -u '${{ github.actor }}' --password-stdin
